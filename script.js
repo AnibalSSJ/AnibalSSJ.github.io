@@ -21,6 +21,13 @@ noButton.addEventListener("click", () => {
   handleNoClick();
 });
 
+// Añadir evento de clic al botón "No"
+noButton.addEventListener("click", () => {
+  if (noButton.innerHTML === "¡Voy a llorar...!") {
+    makeButtonCry();
+  }
+});
+
 // Función para manejar el clic en el botón "Sí"
 function handleYesClick() {
   titleElement.innerHTML = "DESMOLE CORTE MI REINA 😘!";
@@ -109,6 +116,7 @@ function makeButtonCry() {
   // Añadir clase de animación al botón
   noButton.classList.add("cry-animation");
 }
+
 
 // Añadir evento para el movimiento del botón "No" al pasar el cursor sobre él
 noButton.addEventListener("mouseenter", () => {
